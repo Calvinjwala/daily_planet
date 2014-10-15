@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Articles</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="stylesheet.css">
+
+</head>
+<body>
+<div class= "container">
+  <div class="navbar navbar-default" id="top" role="banner">
+      <div class="navbar-header">
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+        </button>
+        <a href="../" class="navbar-brand">AlphaBrand</a>
+      </div>
+      <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+        <ul class="nav navbar-nav navbar-left">
+          <li>
+            <a href='/'>Home</a>
+          </li>
+          <li>
+            <a href='/articles'>Archives</a>
+          </li>
+          <li>
+           <a href='/articles/new'>Post an Article</a>
+          </li>
+          <li>
+            <a href='/about'>About Us</a>
+          </li>
+          <li>
+            <a href='/contact'>Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+<% if(typeof article === 'undefined'){ %>
+  <h4>No article has been created yet, please go <a href="/">home</a></h4>
+  <% } else {%>  
+  <br>
+    Issue: <%=article.id%>
+  <br>
+    Title: <%=article.title%>
+  <br>
+    Body: <%=article.body%>
+  <br>
+  <% }%>
+</div>
+</body>
+</html>
